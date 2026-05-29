@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>EferGames - Video Game Store</title>
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <header>
+    <h1>EferGames</h1>
+    <p>Video games, consoles, and gaming accessories store</p>
+  </header>
+
+  <div class="marquee-box">
+    <marquee behavior="scroll" direction="left">
+      Project created by: Esteban Gómez | Course: Web Development | Universidad Mariano Gálvez de Guatemala | Video Game Store Web Page
+    </marquee>
+  </div>
+
+  <div class="container">
+    <nav>
+      <a href="#home" class="active">Home</a>
+      <a href="#about-us">Who We Are</a>
+      <a href="#mission-vision">About Us</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#promo-video">Video</a>
+      <a href="#suppliers">Suppliers</a>
+      <a href="#products">Products</a>
+      <a href="#customers">Customers</a>
+      <a href="#contact-us">Contact Us</a>
+    </nav>
+
+    <main>
+      <section id="home" class="hero">
+        <h2>Your trusted gaming store</h2>
+
+        <p>
+          Find video games, consoles, controllers, headsets, and accessories to enjoy your favorite games.
+        </p>
+
+        <button class="button" onclick="showPromotion()">See today's promotion</button>
+        <button class="button" onclick="toggleMusic()">Play / Pause Background Music</button>
+
+        <p id="promotion" class="promotion-text"></p>
+      </section>
+
+      <section id="about-us">
+        <h2>Who We Are</h2>
+
+        <p>
+          EferGames is a web page created as an academic project to represent a modern video game store.
+          The purpose of this page is to show information about the company, its mission, vision, suppliers,
+          products, customers, and contact details. Through the use of HTML, CSS, and JavaScript, this project
+          presents an organized, attractive, and interactive design focused on the sale of video games, consoles,
+          and gaming accessories.
+        </p>
+      </section>
+
+      <section id="mission-vision">
+        <h2>About Us</h2>
+
+        <div class="creator-box">
+          <img src="images/esteban.jpg" alt="Project creator photo" class="creator-photo" />
+
+          <div>
+            <h3>Project Creator</h3>
+
+            <p>
+              This web page was created as an academic project for the Web Development course.
+              The purpose of this project is to present a video game store using HTML, CSS, and JavaScript.
+            </p>
+          </div>
+        </div>
+
+        <div class="cards">
+          <div class="card">
+            <h3>Mission</h3>
+
+            <p>
+              To provide our customers with quality gaming products, reliable advice, and a safe, fast,
+              and satisfying shopping experience.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Vision</h3>
+
+            <p>
+              To become one of the most recognized video game stores in Guatemala because of our product variety,
+              good service, and commitment to the gaming community.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="gallery">
+        <h2>Gaming Gallery</h2>
+
+        <p>
+          Discover some of the gaming products and experiences that EferGames offers to its customers.
+        </p>
+
+        <div class="slider">
+          <img id="slider-image" src="images/banner1.jpg" alt="Gaming image slider" />
+        </div>
+
+        <div class="slider-buttons">
+          <button onclick="previousImage()">Previous</button>
+          <button onclick="nextImage()">Next</button>
+        </div>
+      </section>
+
+      <section id="promo-video">
+        <h2>Promotional Video</h2>
+
+        <p>
+          Watch this short promotional video about the gaming experience that EferGames wants to offer.
+        </p>
+
+        <video controls>
+          <source src="videos/promo.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </section>
+
+      <section id="suppliers">
+        <h2>Suppliers</h2>
+
+        <p>
+          We work with national and international suppliers to offer original and high-quality products.
+        </p>
+
+        <div class="cards">
+          <div class="card">
+            <h3>Sony PlayStation</h3>
+            <p>Consoles, controllers, and exclusive games.</p>
+          </div>
+
+          <div class="card">
+            <h3>Microsoft Xbox</h3>
+            <p>Consoles, Game Pass, controllers, and accessories.</p>
+          </div>
+
+          <div class="card">
+            <h3>Nintendo</h3>
+            <p>Family games, Nintendo Switch consoles, and accessories.</p>
+          </div>
+
+          <div class="card">
+            <h3>Local Distributors</h3>
+            <p>Accessories, headsets, keyboards, mice, and different gaming products.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="products">
+        <h2>Products Offered</h2>
+
+        <p>
+          Select a category to filter the products. This function was created with JavaScript.
+        </p>
+
+        <div class="product-filter">
+          <button onclick="filterProducts('all')">All</button>
+          <button onclick="filterProducts('games')">Video Games</button>
+          <button onclick="filterProducts('consoles')">Consoles</button>
+          <button onclick="filterProducts('accessories')">Accessories</button>
+        </div>
+
+        <div class="cards">
+          <div class="card product games">
+            <h3>EA Sports FC 26</h3>
+            <p>Sports video game for PlayStation and Xbox.</p>
+            <p class="price">Q550.00</p>
+          </div>
+
+          <div class="card product games">
+            <h3>Mario Kart 8 Deluxe</h3>
+            <p>Racing game for Nintendo Switch.</p>
+            <p class="price">Q475.00</p>
+          </div>
+
+          <div class="card product consoles">
+            <h3>PlayStation 5</h3>
+            <p>Next-generation console with fast loading speed.</p>
+            <p class="price">Q5,200.00</p>
+          </div>
+
+          <div class="card product consoles">
+            <h3>Nintendo Switch OLED</h3>
+            <p>Hybrid console, perfect for playing at home or on the go.</p>
+            <p class="price">Q3,100.00</p>
+          </div>
+
+          <div class="card product accessories">
+            <h3>Wireless Controller</h3>
+            <p>Controller compatible with PC and selected consoles.</p>
+            <p class="price">Q350.00</p>
+          </div>
+
+          <div class="card product accessories">
+            <h3>RGB Gaming Headset</h3>
+            <p>Headset with microphone for online communication.</p>
+            <p class="price">Q280.00</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="customers">
+        <h2>Customers</h2>
+
+        <p>
+          Our main customers are teenagers, university students, families, and players who are looking for quality digital entertainment.
+        </p>
+
+        <div class="cards">
+          <div class="card">
+            <h3>Casual Players</h3>
+            <p>People who play video games for entertainment and fun.</p>
+          </div>
+
+          <div class="card">
+            <h3>Competitive Gamers</h3>
+            <p>Users who look for good-performance accessories for online matches.</p>
+          </div>
+
+          <div class="card">
+            <h3>Families</h3>
+            <p>Customers who look for video games that can be enjoyed at home with others.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact-us">
+        <h2>Contact Us</h2>
+
+        <div class="contact-info">
+          <p><strong>Address:</strong> Guatemala City, Zone 10, Gamer Plaza Shopping Center.</p>
+          <p><strong>Phone:</strong> +502 5555-1234</p>
+          <p><strong>Email:</strong> sales@efergames.com</p>
+        </div>
+
+        <h3>Location</h3>
+
+        <iframe
+          src="https://www.google.com/maps?q=Universidad%20Mariano%20G%C3%A1lvez%20de%20Guatemala&output=embed"
+          allowfullscreen=""
+          loading="lazy">
+        </iframe>
+
+        <h3>Social Media</h3>
+
+        <div class="social-media">
+          <a href="https://www.facebook.com" target="_blank">Facebook</a>
+          <a href="https://www.instagram.com" target="_blank">Instagram</a>
+          <a href="https://www.tiktok.com" target="_blank">TikTok</a>
+          <a href="https://www.whatsapp.com" target="_blank">WhatsApp</a>
+        </div>
+
+        <form onsubmit="validateForm(event)">
+          <h3>Contact Form</h3>
+
+          <input type="text" id="name" placeholder="Enter your name" />
+          <input type="email" id="email" placeholder="Enter your email address" />
+          <textarea id="message" rows="5" placeholder="Write your message"></textarea>
+
+          <button class="button" type="submit">Send Message</button>
+        </form>
+      </section>
+    </main>
+  </div>
+
+  <audio id="background-music" loop>
+    <source src="audio/background-music.mp3" type="audio/mpeg" />
+    Your browser does not support the audio element.
+  </audio>
+
+  <footer>
+    <p><strong>Universidad Mariano Gálvez de Guatemala</strong></p>
+    <p>“Conoceréis la verdad y la verdad os hará libres”</p>
+
+    <div class="footer-social-media">
+      <a href="https://www.facebook.com" target="_blank">Facebook</a>
+      <a href="https://www.instagram.com" target="_blank">Instagram</a>
+      <a href="https://www.tiktok.com" target="_blank">TikTok</a>
+      <a href="https://www.whatsapp.com" target="_blank">WhatsApp</a>
+    </div>
+
+    <p>© <span id="year"></span> EferGames. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
